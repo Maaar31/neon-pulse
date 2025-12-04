@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Pulse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div id="score-display">SCORE: <span id="score">0</span></div>
+            <div id="credits-display">CREDITS: <span id="credits">0</span></div>
+            <div id="wave-display">WAVE: <span id="wave">1</span></div>
+            <div id="dash-indicator">DASH: <span id="dash-status">READY</span></div>
+            <div id="health-bar-container">
+                <div id="health-bar"></div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1 class="neon-title">NEON PULSE</h1>
+            <p>WASD / Flèches - Déplacement</p>
+            <p>Souris - Viser et Tirer</p>
+            <p>ESPACE - Dash</p>
+            <p>ÉCHAP - Pause</p>
+            <button id="start-btn" class="neon-btn">COMMENCER</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen">
+            <h1 class="neon-title">GAME OVER</h1>
+            <p>Score Final: <span id="final-score">0</span></p>
+            <p>Meilleur Score: <span id="high-score">0</span></p>
+            <button id="restart-btn" class="neon-btn">REJOUER</button>
+        </div>
+
+        <!-- Pause Screen -->
+        <div id="pause-screen" class="screen">
+            <h2 class="shop-title">PAUSE</h2>
+            <p>Appuyez sur ÉCHAP pour continuer</p>
+            <div style="margin-top: 30px;">
+                <p><strong>Contrôles:</strong></p>
+                <p>WASD - Déplacement</p>
+                <p>Souris - Viser et Tirer</p>
+                <p>ESPACE - Dash</p>
+                <p>ÉCHAP - Pause</p>
+            </div>
+        </div>
+
+        <!-- Shop Screen -->
+        <div id="shop-screen" class="screen">
+            <h2 class="shop-title">BOUTIQUE D'AMÉLIORATIONS</h2>
+            <p class="shop-credits">Crédits: <span id="shop-credits">0</span></p>
+            <div id="upgrades-container"></div>
+            <button id="continue-btn" class="neon-btn">CONTINUER</button>
+        </div>
+    </div>
+
+    <script src="audio.js"></script>
+    <script src="entities.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
